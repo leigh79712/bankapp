@@ -1,7 +1,10 @@
-import "./globals.css"
-import Navbar from "../components/Navbar"
+import { ThemeProvider } from "next-themes";
+import Navbar from "../components/Navbar";
+
 export default function Page() {
-    return <div>
-        <Navbar />
-    </div>
+  return (
+    <ThemeProvider attribute="class">
+      <Navbar />
+    </ThemeProvider>
+  );
 }
