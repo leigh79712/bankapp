@@ -7,7 +7,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "tiffany-green": "#2ec4b6",
+      },
+    },
   },
   plugins: [],
 };
