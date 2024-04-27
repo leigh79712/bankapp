@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,5 +7,8 @@
   body {
     @apply dark:bg-[#23272F] 
         bg-[white];
+  }
+  html {
+    font-family: "Kanit", sans-serif;
   }
 }

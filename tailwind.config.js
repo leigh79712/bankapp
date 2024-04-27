@@ -11,6 +11,9 @@ module.exports = {
       colors: {
         "tiffany-green": "#2ec4b6",
       },
+      space: {
+        "10em": "10em",
+      },
     },
   },
   plugins: [],

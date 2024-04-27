@@ -1,8 +1,21 @@
 {
-  "home": "首頁",
+  "links": [
+    { "name": "首頁", "url": "/" },
+    { "name": "服務", "url": "/feature" },
+    { "name": "相關業務", "url": "/operations" }
+  ],
+  "footerLinks": [
+    { "name": "關於我們", "url": "/about" },
+    { "name": "服務價格", "url": "/pricing" },
+    { "name": "使用條館", "url": "/terms-of-use" },
+    { "name": "隱私政策", "url": "/privacy-policy" },
+    { "name": "招募", "url": "/careers" },
+    { "name": "部落格", "url": "/blog" },
+    { "name": "聯絡我們", "url": "/contact-us" }
+  ],
   "register": "註冊",
   "myApp": "進入我的頁面",
-  "bannerH1": "讓 極 簡 主 義<br/>融 入 您 的 金 融 生 活",
+  "bannerH1": "讓 極 簡 主 義\n融 入 您 的 金 融 生 活",
   "bannerH4": "讓 您 的 生 活 更 簡 單",
   "feature": "服務",
   "featureHeader": "您 最 需 要 的 現 代 銀 行",

@@ -1,10 +1,24 @@
 {
+  "links": [
+    { "name": "HOME", "url": "/" },
+    { "name": "FEATURE", "url": "/feature" },
+    { "name": "OPERATIONS", "url": "/operations" }
+  ],
+  "footerLinks": [
+    { "name": "About", "url": "/about" },
+    { "name": "Pricing", "url": "/pricing" },
+    { "name": "Terms of Use", "url": "/terms-of-use" },
+    { "name": "Privacy Policy", "url": "/privacy-policy" },
+    { "name": "Careers", "url": "/careers" },
+    { "name": "Blog", "url": "/blog" },
+    { "name": "Contact Us", "url": "/contact-us" }
+  ],
   "home": "Home",
   "register": "Register",
   "myApp": "My app",
   "bannerH1": "When banking meets minimalist",
   "bannerH4": " Make your life easier",
-  "feature": "FEATURE",
+  "feature": "feature",
   "featureHeader": "Everything you need in a modern bank and More",
   "feature1": "100% digital bank",
   "feature2": "Watch your money grow",
@@ -15,5 +29,6 @@
   "operation2": "Frequent Flyer Points",
   "operation3": "Quick Start Home Loan Application",
   "joinTodayHeader": "Do your banking where and when you like",
-  "joinUs": "Join Us Today"
+  "joinUs": "Join Us Today",
+  "lorem": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis aperiam vero sed corporis voluptatem voluptatum nulla?"
 }
