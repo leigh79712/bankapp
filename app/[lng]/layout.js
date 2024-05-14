@@ -1,4 +1,6 @@
 import "../globals.css";
+import Navbar from "../../components/Homepage/Navbar";
+import { ThemeProvider } from "next-themes";
 
 import { dir } from "i18next";
 
@@ -10,7 +12,12 @@ export async function generateStaticParams() {
 export default function RootLayout({ children, params: { lng } }) {
   return (
     <html lang={lng} dir={dir(lng)}>
-      <body>{children}</body>
+      <body>
+        <ThemeProvider attribute="class">
+          <Navbar lng={lng} />
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
