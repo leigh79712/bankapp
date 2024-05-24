@@ -6,7 +6,7 @@ import { dir } from "i18next";
 
 const languages = ["en", "zh"];
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
 }
 export default function RootLayout({ children, params: { lng } }) {

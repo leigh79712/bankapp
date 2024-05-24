@@ -4,7 +4,7 @@ import Operation from "../../components/Homepage/Operation";
 import JoinToday from "../../components/Homepage/JoinToday";
 import Footer from "../../components/Homepage/Footer";
 
-export default async function Page({ params: { lng } }) {
+export default function Page({ params: { lng } }) {
   return (
     <>
       <Banner lng={lng} />

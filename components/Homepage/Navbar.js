@@ -10,7 +10,7 @@ import { useTranslation } from "../../app/i18n/client";
 import Language from "../Language";
 import ThemeButton from "../ThemeButton";
 
-export default function Navbar({ lng }, props) {
+export default function Navbar({ lng }) {
   const [opacity, setOpacity] = useState(100);
   const { theme, setTheme } = useTheme();
   const changeTheme = () =>
@@ -26,7 +26,7 @@ export default function Navbar({ lng }, props) {
     e.target.style.opacity = null;
     setOpacity(100);
   };
-  console.log(localStorage.getItem("theme"));
+
   return (
     <div className="flex h-14 items-center p-8 justify-around">
       {theme === "light" ? (
@@ -35,7 +35,7 @@ export default function Navbar({ lng }, props) {
         <Image src={logo_dark} width={150} alt="logo-dark" />
       )}
 
-      <div className="flex justify-between uppercase w-3/12 transition-opacity transition">
+      <div className="flex justify-between uppercase w-3/12">
         {t("links", { returnObjects: true }).map((link, i) => {
           return (
             <div
