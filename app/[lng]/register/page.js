@@ -1,59 +1,47 @@
+"use client";
 import React from "react";
-import logo_light from "../../../public/images/logo-light.svg";
-import logo_dark from "../../../public/images/logo-dark.svg";
-import Image from "next/image";
 import Link from "next/link";
-export default function page() {
+import Logo from "../../../components/Logo";
+import Input from "../../../components/Input";
+import Label from "../../../components/Label";
+import { useTranslation } from "../../i18n/client";
+
+export default function page({ params: { lng } }) {
+  const { t } = useTranslation(lng);
+
   return (
-    <div className="">
+    <div>
       <form
         className="w-1/3 mx-auto text-center mt-20 p-10 rounded shadow-lg shadow-indigo-600/60"
         action=""
       >
-        <Image src={logo_dark} height={100} width={200} className="mx-auto" />
-        <h1 className="text-xl my-5 mx-auto">Sign In</h1>
+        <Logo />
+        <h1 className="text-xl my-5 mx-auto">{t("register")}</h1>
 
-        <label htmlFor="username" className="block text-left w-2/3 mx-auto">
-          username
-        </label>
-        <input
-          type="text"
-          name="username"
-          className="bg-white w-2/3 h-10 rounded mb-2 text-black"
-          placeholder="username"
-        />
-        <label htmlFor="username" className="block text-left w-2/3 mx-auto">
-          password
-        </label>
-        <input
+        <Label htmlFor="username">{t("usernameText")}</Label>
+        <Input type="text" name="username" placeholder={t("usernameText")} />
+        <Label htmlFor="firstname">{t("firstName")}</Label>
+        <Input type="text" name="firstname" placeholder={t("firstName")} />
+        <Label htmlFor="lastname">{t("lastName")}</Label>
+        <Input type="text" name="lastname" placeholder={t("lastName")} />
+        <Label htmlFor="password">{t("passwordText")}</Label>
+        <Input
           type="password"
-          className="bg-white w-2/3 h-10 rounded mb-2 text-black"
-          placeholder="password"
+          placeholder={t("passwordText")}
+          name="password"
         />
-        <label htmlFor="username" className="block text-left w-2/3 mx-auto">
-          confirm-password
-        </label>
-        <input
-          type="password"
-          className="bg-white w-2/3 h-10 rounded mb-2  text-black"
-          placeholder="confirm-password"
-        />
-        <label htmlFor="username" className="block text-left w-2/3 mx-auto">
-          E-mail
-        </label>
-        <input
-          type="email"
-          className="bg-white w-2/3 h-10 rounded mb-2  text-black"
-          placeholder="email"
-        />
+        <Label htmlFor="confirm">{t("doublecheck")}</Label>
+        <Input type="password" placeholder={t("doublecheck")} name="confirm" />
+        <Label htmlFor="username">{t("mail")}</Label>
+        <Input type="email" placeholder={t("mail")} name="email" />
         <input
           type="submit"
-          className="block w-1/3 bg-white text-black rounded border-none my-10 mx-auto h-8"
+          className="block w-1/3 bg-tiffany-green text-white rounded border-none my-10 mx-auto h-8"
         />
         <p>
-          Don't have account?{" "}
+          {t("already")}{" "}
           <Link href="/login" className="mx-2 text-indigo-200">
-            Sign in
+            {t("login")}
           </Link>
         </p>
       </form>

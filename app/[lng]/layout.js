@@ -1,7 +1,7 @@
 import "../globals.css";
 import Navbar from "../../components/Homepage/Navbar";
 import { ThemeProvider } from "next-themes";
-
+import Footer from "../../components/Homepage/Footer";
 import { dir } from "i18next";
 
 const languages = ["en", "zh"];
@@ -16,6 +16,7 @@ export default function RootLayout({ children, params: { lng } }) {
         <ThemeProvider attribute="class">
           <Navbar lng={lng} />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

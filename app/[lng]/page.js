@@ -2,7 +2,7 @@ import Banner from "../../components/Homepage/Banner";
 import Feature from "../../components/Homepage/Feature";
 import Operation from "../../components/Homepage/Operation";
 import JoinToday from "../../components/Homepage/JoinToday";
-import Footer from "../../components/Homepage/Footer";
+import Links from "../../components/Homepage/Links";
 
 export default function Page({ params: { lng } }) {
   return (
@@ -11,7 +11,7 @@ export default function Page({ params: { lng } }) {
       <Feature lng={lng} />
       <Operation lng={lng} />
       <JoinToday lng={lng} />
-      <Footer lng={lng} />
+      <Links lng={lng} />
     </>
   );
 }

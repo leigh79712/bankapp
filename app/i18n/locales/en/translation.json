@@ -16,6 +16,9 @@
   "home": "Home",
   "register": "Register",
   "myApp": "My app",
+  "login": "Login",
+  "already": "Already have an account?",
+  "account": "Don't have account?",
   "bannerH1": "When banking meets minimalist",
   "bannerH4": " Make your life easier",
   "feature": "feature",
@@ -30,5 +33,11 @@
   "operation3": "Quick Start Home Loan Application",
   "joinTodayHeader": "Do your banking where and when you like",
   "joinUs": "Join Us Today",
-  "lorem": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis aperiam vero sed corporis voluptatem voluptatum nulla?"
+  "lorem": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis aperiam vero sed corporis voluptatem voluptatum nulla?",
+  "usernameText": "Username",
+  "passwordText": "Password",
+  "doublecheck": "confirm-password",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "mail": "E-mail"
 }

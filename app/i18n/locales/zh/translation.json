@@ -15,6 +15,9 @@
   ],
   "register": "註冊",
   "myApp": "進入我的頁面",
+  "login": "登入",
+  "already": "已經有帳號了嗎？",
+  "account": "沒有帳號嗎？",
   "bannerH1": "讓 極 簡 主 義\n融 入 您 的 金 融 生 活",
   "bannerH4": "讓 您 的 生 活 更 簡 單",
   "feature": "服務",
@@ -28,5 +31,11 @@
   "operation2": "紅利點數加倍",
   "operation3": "房貸信貸無負擔",
   "joinTodayHeader": "隨 時 隨 地 的 處 理 銀 行 業 務",
-  "joinUs": "加入我們"
+  "joinUs": "加入我們",
+  "usernameText": "會員代號",
+  "passwordText": "密碼",
+  "doublecheck": "確認密碼",
+  "lastName": "姓氏",
+  "firstName": "名字",
+  "mail": "電子信箱"
 }
