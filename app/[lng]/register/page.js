@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Logo from "../../../components/Logo";
 import Input from "../../../components/Input";
@@ -9,11 +9,20 @@ import { useTranslation } from "../../i18n/client";
 export default function page({ params: { lng } }) {
   const { t } = useTranslation(lng);
 
+  const FormAction = async (formData) => {
+    const res = await fetch("/api", {
+      method: "POST",
+      body: formData,
+    });
+    const data = await res.json();
+    console.log(data);
+  };
   return (
     <div>
       <form
         className="w-1/3 mx-auto text-center mt-20 p-10 rounded shadow-lg shadow-indigo-600/60"
-        action=""
+        action="/api/user"
+        method="POST"
       >
         <Logo />
         <h1 className="text-xl my-5 mx-auto">{t("register")}</h1>
