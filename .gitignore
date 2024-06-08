@@ -2,9 +2,9 @@
 /.next
 
 # mac junk file
-*.DS_Store
+.DS_Store
 
 # dotenv environment variables file
 .env
 .env.test
-.env.local
+.env.local.DS_Store
