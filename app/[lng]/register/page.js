@@ -9,14 +9,6 @@ import { useTranslation } from "../../i18n/client";
 export default function page({ params: { lng } }) {
   const { t } = useTranslation(lng);
 
-  const FormAction = async (formData) => {
-    const res = await fetch("/api", {
-      method: "POST",
-      body: formData,
-    });
-    const data = await res.json();
-    console.log(data);
-  };
   return (
     <div>
       <form
