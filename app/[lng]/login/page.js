@@ -13,8 +13,9 @@ export default function page({ params: { lng } }) {
   return (
     <div className="">
       <form
+        method="POST"
+        action="/login"
         className="w-1/3 mx-auto border text-center mt-20 p-10 rounded shadow-lg shadow-indigo-600/60"
-        action=""
       >
         <Logo />
 

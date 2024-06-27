@@ -49,6 +49,9 @@ export default function Navbar({ lng }) {
         >
           {t("register")}
         </Link>
+        <Link href="/login" className="p-2">
+          {t("login")}
+        </Link>
         <Language lng={lng} t={t} />
         <ThemeButton theme={theme} changeTheme={changeTheme} />
       </div>

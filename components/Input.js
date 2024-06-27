@@ -8,7 +8,7 @@ export default function Input(props) {
       type={props.type}
       placeholder={props.placeholder}
       className={`${theme == "dark" ? "bg-white" : "bg-[#f3f5f8]"} 
-      border p-1 w-2/3 h-10 rounded mb-4`}
+      border p-1 w-2/3 h-10 rounded mb-4 text-black`}
       name={props.name}
     />
   );
