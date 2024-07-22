@@ -8,7 +8,13 @@ import { useTranslation } from "../../i18n/client";
 
 export default function page({ params: { lng } }) {
   const { t } = useTranslation(lng);
-
+  const [password, setPassword] = useState("");
+  const [hidden, setHidden] = useState("hidden");
+  const handleConfirm = (e) => {
+    if (e.target.value !== password) {
+      setHidden("block");
+    } else setHidden("hidden");
+  };
   return (
     <div>
       <form
@@ -30,9 +36,18 @@ export default function page({ params: { lng } }) {
           type="password"
           placeholder={t("passwordText")}
           name="password"
+          onChange={(e) => setPassword(e.target.value)}
         />
         <Label htmlFor="confirm">{t("doublecheck")}</Label>
-        <Input type="password" placeholder={t("doublecheck")} name="confirm" />
+        <Input
+          type="password"
+          placeholder={t("doublecheck")}
+          name="confirm"
+          onChange={handleConfirm}
+        />
+        <div className={`text-red-700 mb-1 ${hidden}`}>
+          password is not matching
+        </div>
         <Label htmlFor="username">{t("mail")}</Label>
         <Input type="email" placeholder={t("mail")} name="email" />
         <input
