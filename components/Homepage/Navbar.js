@@ -1,16 +1,18 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useTranslation } from "../../app/i18n/client";
 import Language from "../Language";
 import ThemeButton from "../ThemeButton";
 import Logo from "../Logo";
+import useSWR from "swr";
 
 export default function Navbar({ lng }) {
   const [opacity, setOpacity] = useState(100);
   const { theme, setTheme } = useTheme();
+  const [loggedIn, setLoggedIn] = useState(false);
   const changeTheme = () =>
     theme === "dark" ? setTheme("light") : setTheme("dark");
 
@@ -24,6 +26,19 @@ export default function Navbar({ lng }) {
     e.target.style.opacity = null;
     setOpacity(100);
   };
+  // const { data, err } = useSWR("/api/user", async function (args) {
+  //   const res = await fetch(args);
+  //   return res.json();
+  // });
+
+  // useEffect(() => {
+  //   if (!data) {
+  //     console.log("!");
+  //   }
+  //   if (data) {
+  //     console.log("yes");
+  //   }
+  // }, [data]);
 
   return (
     <div className="flex h-14 items-center p-8 justify-around">
