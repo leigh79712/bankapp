@@ -28,6 +28,7 @@ export default function Navbar({ lng }) {
   };
   // const { data, err } = useSWR("/api/user", async function (args) {
   //   const res = await fetch(args);
+  //   console.log(res);
   //   return res.json();
   // });
 

@@ -73,7 +73,7 @@ app.prepare().then(() => {
   );
   server.post("/api/user", async (req, res) => {
     const { firstname, lastname, username, password, email } = req.body;
-    const user = new User({ username, email, firstname, lastname });
+    const user = new User({ username, email, firstname, lastname, password });
     const registeredUser = await User.register(user, password);
     res.redirect("/");
   });

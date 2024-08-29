@@ -22,9 +22,13 @@ export default function page({ params: { lng } }) {
         <h1 className="text-xl my-5 mx-auto">Sign In</h1>
 
         <Label htmlFor="username">{t("usernameText")}</Label>
-        <Input type="text" placeholder={t("usernameText")} />
+        <Input type="text" name="username" placeholder={t("usernameText")} />
         <Label htmlFor="username">{t("passwordText")}</Label>
-        <Input type="password" placeholder={t("passwordText")} />
+        <Input
+          type="password"
+          name="password"
+          placeholder={t("passwordText")}
+        />
         <input
           type="submit"
           className="block w-1/3 bg-tiffany-green text-white rounded border-none my-10 mx-auto h-8"
