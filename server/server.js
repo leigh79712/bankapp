@@ -71,15 +71,24 @@ app.prepare().then(() => {
       res.redirect("/");
     }
   );
+  server.get("/api/user", async (req, res) => {
+    const user = req.user;
+    res.status(200).json(user);
+  });
   server.post("/api/user", async (req, res) => {
     const { firstname, lastname, username, password, email } = req.body;
     const user = new User({ username, email, firstname, lastname, password });
     const registeredUser = await User.register(user, password);
     res.redirect("/");
   });
-  server.get("/logout", (req, res) => {
-    req.logout();
-    res.redirect("/");
+
+  server.get("/logout", (req, res, next) => {
+    req.logout((err) => {
+      if (err) {
+        return next(err);
+      }
+      res.redirect("/");
+    });
   });
 
   server.get("*", (req, res) => {

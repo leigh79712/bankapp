@@ -26,20 +26,20 @@ export default function Navbar({ lng }) {
     e.target.style.opacity = null;
     setOpacity(100);
   };
-  // const { data, err } = useSWR("/api/user", async function (args) {
-  //   const res = await fetch(args);
-  //   console.log(res);
-  //   return res.json();
-  // });
+  const { data, err } = useSWR("/api/user", async function (args) {
+    const res = await fetch(args);
+    return res.json();
+  });
 
-  // useEffect(() => {
-  //   if (!data) {
-  //     console.log("!");
-  //   }
-  //   if (data) {
-  //     console.log("yes");
-  //   }
-  // }, [data]);
+  useEffect(() => {
+    if (!data) {
+      setLoggedIn(false);
+    }
+    if (data) {
+      console.log(data);
+      setLoggedIn(true);
+    }
+  }, [data]);
 
   return (
     <div className="flex h-14 items-center p-8 justify-around">
@@ -59,15 +59,28 @@ export default function Navbar({ lng }) {
         })}
       </div>
       <div className="flex w-2/12 justify-evenly text-xs items-center">
-        <Link
-          className="p-2 bg-tiffany-green rounded text-white"
-          href="/register"
-        >
-          {t("register")}
-        </Link>
-        <Link href="/login" className="p-2">
-          {t("login")}
-        </Link>
+        {!loggedIn && (
+          <>
+            <Link
+              className="p-2 bg-tiffany-green rounded text-white"
+              href="/register"
+            >
+              {t("register")}
+            </Link>
+            <Link href="/login" className="p-2">
+              {t("login")}
+            </Link>
+          </>
+        )}
+        {loggedIn && (
+          <>
+            Hi, {data.firstname}
+            <form action="/logout" method="GET">
+              <button type="submit">Logout</button>
+            </form>
+          </>
+        )}
+
         <Language lng={lng} t={t} />
         <ThemeButton theme={theme} changeTheme={changeTheme} />
       </div>
