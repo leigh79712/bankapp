@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { Trans } from "react-i18next";
-import { languages } from "../app/i18n/setting";
 
 export default function Language({ t, lng }) {
   const language = {
@@ -19,7 +18,9 @@ export default function Language({ t, lng }) {
     for (const key in language) {
       Lists.push(
         <li key={key} onClick={() => setIsShow(false)}>
-          <Link href={`/${key}`}>{language[key]}</Link>
+          <Link href={`/${key}/${location.pathname.slice(3)}`}>
+            {language[key]}
+          </Link>
         </li>
       );
     }
