@@ -36,7 +36,6 @@ export default function Navbar({ lng }) {
       setLoggedIn(false);
     }
     if (data) {
-      console.log(data);
       setLoggedIn(true);
     }
   }, [data]);
@@ -52,6 +51,7 @@ export default function Navbar({ lng }) {
               key={i}
               onMouseEnter={mouseEnter}
               onMouseOut={mouseOut}
+              href={"/"}
             >
               {link.name}
             </div>
@@ -75,6 +75,7 @@ export default function Navbar({ lng }) {
         {loggedIn && (
           <>
             Hi, {data.firstname}
+            <Link href={`${data.username}/bankdashboard`}>Dashborad</Link>
             <form action="/logout" method="GET">
               <button type="submit">Logout</button>
             </form>

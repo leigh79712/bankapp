@@ -15,8 +15,8 @@ export default function RootLayout({ children, params: { lng } }) {
       <body>
         <ThemeProvider attribute="class">
           <Navbar lng={lng} />
-          {children}
-          <Footer />
+          {children}s
+          <Footer lng={lng} />
         </ThemeProvider>
       </body>
     </html>

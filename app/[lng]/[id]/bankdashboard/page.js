@@ -1,4 +1,4 @@
-import Dashboard from "../../../components/BankAppPage/Dashboard";
+import Dashboard from "../../../../components/BankAppPage/Dashboard";
 export default function Page() {
   return (
     <>
